@@ -1,12 +1,12 @@
 const celdas = [];
-const RETICULA = 6;
+const RETICULA = 8;
 
 // ancho y alto de la celda
 let ancho;
 let alto;
 
 const azulejos = [];
-const NA = 6; //numero de azulejos
+const NA = 54; //numero de azulejos
 
 const reglas = [
   //reglas de los bordes de cada azulejo
@@ -51,6 +51,251 @@ const reglas = [
     RIGTH: 0,
     DOWN: 0,
     LEFT: 4,
+  },
+  {
+    //tile 6
+    UP: 0,
+    RIGTH: 2,
+    DOWN: 0,
+    LEFT: 0,
+  },
+  {
+    //tile 7
+    UP: 0,
+    RIGTH: 2,
+    DOWN: 0,
+    LEFT: 2,
+  },
+  {
+    //tile 8
+    UP: 3,
+    RIGTH: 0,
+    DOWN: 0,
+    LEFT: 2,
+  },
+  {
+    //tile 9
+    UP: 0,
+    RIGTH: 0,
+    DOWN: 3,
+    LEFT: 0,
+  },
+  {
+    //tile 10
+    UP: 0,
+    RIGTH: 2,
+    DOWN: 0,
+    LEFT: 0,
+  },
+  {
+    //tile 11
+    UP: 0,
+    RIGTH: 2,
+    DOWN: 0,
+    LEFT: 2,
+  },
+  {
+    //tile 12
+    UP: 3,
+    RIGTH: 0,
+    DOWN: 0,
+    LEFT: 2,
+  },
+  {
+    //tile 13
+    UP: 0,
+    RIGTH: 0,
+    DOWN: 3,
+    LEFT: 0,
+  },
+  {
+    //tile 14
+    UP: 0,
+    RIGTH: 0,
+    DOWN: 1,
+    LEFT: 0,
+  },
+  {
+    //tile 15
+    UP: 1,
+    RIGTH: 2,
+    DOWN: 0,
+    LEFT: 0,
+  },
+  {
+    //tile 16
+    UP: 0,
+    RIGTH: 0,
+    DOWN: 5,
+    LEFT: 2,
+  },
+  {
+    //tile 17
+    UP: 5,
+    RIGTH: 2,
+    DOWN: 0,
+    LEFT: 0,
+  },
+  {
+    //tile 18
+    UP: 0,
+    RIGTH: 4,
+    DOWN: 0,
+    LEFT: 2,
+  },
+  {
+    //tile 19
+    UP: 0,
+    RIGTH: 4,
+    DOWN: 0,
+    LEFT: 4,
+  },
+  {
+    //tile 20
+    UP: 3,
+    RIGTH: 0,
+    DOWN: 0,
+    LEFT: 4,
+  },
+  {
+    //tile 21
+    UP: 0,
+    RIGTH: 0,
+    DOWN: 3,
+    LEFT: 4,
+  },
+  {
+    //tile 22
+    UP: 0,
+    RIGTH: 4,
+    DOWN: 0,
+    LEFT: 0,
+  },
+  {
+    //tile 23
+    UP: 0,
+    RIGTH: 2,
+    DOWN: 0,
+    LEFT: 0,
+  },
+  {
+    //tile 24
+    UP: 0,
+    RIGTH: 2,
+    DOWN: 0,
+    LEFT: 2,
+  },
+  {
+    //tile 25
+    UP: 3,
+    RIGTH: 0,
+    DOWN: 0,
+    LEFT: 2,
+  },
+  {
+    //tile 26
+    UP: 0,
+    RIGTH: 0,
+    DOWN: 3,
+    LEFT: 0,
+  },
+  {
+    //tile 27
+    UP: 5,
+    RIGTH: 4,
+    DOWN: 0,
+    LEFT: 0,
+  },
+  {
+    //tile 28
+    UP: 0,
+    RIGTH: 0,
+    DOWN: 3,
+    LEFT: 4,
+  },
+  {
+    //tile 29
+    UP: 3,
+    RIGTH: 0,
+    DOWN: 0,
+    LEFT: 0,
+  },
+  {
+    //tile 30
+    UP: 3,
+    RIGTH: 0,
+    DOWN: 3,
+    LEFT: 0,
+  },
+  {
+    //tile 31
+    UP: 3,
+    RIGTH: 4,
+    DOWN: 0,
+    LEFT: 0,
+  },
+  {
+    //tile 32
+    UP: 0,
+    RIGTH: 6,
+    DOWN: 7,
+    LEFT: 0,
+  },
+  {
+    //tile 33
+    UP: 0,
+    RIGTH: 6,
+    DOWN: 3,
+    LEFT: 6,
+  },
+  {
+    //tile 34
+    UP: 7,
+    RIGTH: 6,
+    DOWN: 0,
+    LEFT: 0,
+  },
+  {
+    //tile 35
+    UP: 0,
+    RIGTH: 9,
+    DOWN: 0,
+    LEFT: 6,
+  },
+  {
+    //tile 36
+    UP: 0,
+    RIGTH: 0,
+    DOWN: 8,
+    LEFT: 9,
+  },
+  {
+    //tile 37
+    UP: 8,
+    RIGTH: 2,
+    DOWN: 0,
+    LEFT: 2,
+  },
+  {
+    //tile 38
+    UP: 0,
+    RIGTH: 0,
+    DOWN: 0,
+    LEFT: 6,
+  },
+  {
+    //tile 39
+    UP: 0,
+    RIGTH: 6,
+    DOWN: 0,
+    LEFT: 6,
+  },
+  {
+    //tile 39
+    UP: 0,
+    RIGTH: 6,
+    DOWN: 0,
+    LEFT: 6,
   },
 ];
 
