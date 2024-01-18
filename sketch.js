@@ -291,11 +291,102 @@ const reglas = [
     LEFT: 6,
   },
   {
-    //tile 39
+    //tile 40
     UP: 0,
+    RIGTH: 0,
+    DOWN: 8,
+    LEFT: 0,
+  },
+  {
+    //tile 41
+    UP: 8,
     RIGTH: 6,
     DOWN: 0,
+    LEFT: 0,
+  },
+  {
+    //tile 42
+    UP: 0,
+    RIGTH: 0,
+    DOWN: 0,
     LEFT: 6,
+  },
+  {
+    //tile 43
+    UP: 7,
+    RIGTH: 0,
+    DOWN: 0,
+    LEFT: 0,
+  },
+  {
+    //tile 44
+    UP: 0,
+    RIGTH: 0,
+    DOWN: 8,
+    LEFT: 4,
+  },
+  {
+    //tile 45
+    UP: 0,
+    RIGTH: 0,
+    DOWN: 0,
+    LEFT: 6,
+  },
+  {
+    //tile 46
+    UP: 0,
+    RIGTH: 0,
+    DOWN: 7,
+    LEFT: 0,
+  },
+  {
+    //tile 47
+    UP: 8,
+    RIGTH: 0,
+    DOWN: 8,
+    LEFT: 0,
+  },
+  {
+    //tile 48
+    UP: 0,
+    RIGTH: 0,
+    DOWN: 7,
+    LEFT: 6,
+  },
+  {
+    //tile 49
+    UP: 8,
+    RIGTH: 6,
+    DOWN: 0,
+    LEFT: 0,
+  },
+  {
+    //tile 50
+    UP: 7,
+    RIGTH: 0,
+    DOWN: 0,
+    LEFT: 6,
+  },
+  {
+    //tile 51
+    UP: 0,
+    RIGTH: 0,
+    DOWN: 0,
+    LEFT: 6,
+  },
+  {
+    //tile 52
+    UP: 7,
+    RIGTH: 2,
+    DOWN: 7,
+    LEFT: 2,
+  },
+  {
+    //tile 53
+    UP: 7,
+    RIGTH: 10,
+    DOWN: 0,
+    LEFT: 0,
   },
 ];
 
