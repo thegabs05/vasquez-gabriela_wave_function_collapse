@@ -1,11 +1,12 @@
 const celdas = [];
 const RETICULA = 6;
+
 // ancho y alto de la celda
 let ancho;
 let alto;
 
 const azulejos = [];
-const NA = 5; //numero de azulejos
+const NA = 6; //numero de azulejos
 
 const reglas = [
   //reglas de los bordes de cada azulejo
@@ -13,36 +14,43 @@ const reglas = [
     //tile 0
     UP: 0,
     RIGTH: 0,
-    DOWN: 1,
+    DOWN: 0,
     LEFT: 0,
   },
   {
     //tile 1
-    UP: 1,
-    RIGTH: 4,
-    DOWN: 0,
+    UP: 0,
+    RIGTH: 0,
+    DOWN: 1,
     LEFT: 0,
   },
   {
     //tile 2
-    UP: 2,
-    RIGTH: 0,
+    UP: 1,
+    RIGTH: 2,
     DOWN: 0,
-    LEFT: 4,
+    LEFT: 0,
   },
   {
     //tile 3
-    UP: 0,
-    RIGTH: 3,
-    DOWN: 2,
-    LEFT: 0,
+    UP: 3,
+    RIGTH: 0,
+    DOWN: 0,
+    LEFT: 2,
   },
   {
     //tile 4
     UP: 0,
+    RIGTH: 4,
+    DOWN: 3,
+    LEFT: 0,
+  },
+  {
+    //tile 5
+    UP: 0,
     RIGTH: 0,
     DOWN: 0,
-    LEFT: 3,
+    LEFT: 4,
   },
 ];
 
