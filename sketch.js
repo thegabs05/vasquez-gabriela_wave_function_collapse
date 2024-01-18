@@ -1,6 +1,5 @@
 const celdas = [];
-const RETICULA = 4;
-
+const RETICULA = 6;
 // ancho y alto de la celda
 let ancho;
 let alto;
@@ -153,7 +152,7 @@ function draw() {
     }
   }
 
-  noLoop();
+  //noLoop();
 }
 
 function cambiarEntropia(_celda, _regla, _opuesta) {
@@ -165,5 +164,5 @@ function cambiarEntropia(_celda, _regla, _opuesta) {
     }
   }
   _celda.opciones = nuevasOpciones;
-  print(nuevasOpciones);
+  //print(nuevasOpciones);
 }
