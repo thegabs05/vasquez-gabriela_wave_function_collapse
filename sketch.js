@@ -1,12 +1,11 @@
 const celdas = [];
-const RETICULA = 8;
+const RETICULA = 16;
 
 // ancho y alto de la celda
 let ancho;
 let alto;
 
 const azulejos = [];
-const NA = 54; //numero de azulejos
 
 const reglas = [
   //reglas de los bordes de cada azulejo
@@ -41,7 +40,7 @@ const reglas = [
   {
     //tile 4
     UP: 0,
-    RIGTH: 4,
+    RIGTH: 3,
     DOWN: 3,
     LEFT: 0,
   },
@@ -50,7 +49,7 @@ const reglas = [
     UP: 0,
     RIGTH: 0,
     DOWN: 0,
-    LEFT: 4,
+    LEFT: 3,
   },
   {
     //tile 6
@@ -110,10 +109,10 @@ const reglas = [
   },
   {
     //tile 14
-    UP: 0,
+    UP: 5,
     RIGTH: 0,
     DOWN: 1,
-    LEFT: 0,
+    LEFT: 5,
   },
   {
     //tile 15
@@ -126,12 +125,12 @@ const reglas = [
     //tile 16
     UP: 0,
     RIGTH: 0,
-    DOWN: 5,
+    DOWN: 2,
     LEFT: 2,
   },
   {
     //tile 17
-    UP: 5,
+    UP: 2,
     RIGTH: 2,
     DOWN: 0,
     LEFT: 0,
@@ -139,35 +138,35 @@ const reglas = [
   {
     //tile 18
     UP: 0,
-    RIGTH: 4,
+    RIGTH: 3,
     DOWN: 0,
     LEFT: 2,
   },
   {
     //tile 19
     UP: 0,
-    RIGTH: 4,
+    RIGTH: 3,
     DOWN: 0,
-    LEFT: 4,
+    LEFT: 3,
   },
   {
     //tile 20
     UP: 3,
     RIGTH: 0,
     DOWN: 0,
-    LEFT: 4,
+    LEFT: 3,
   },
   {
     //tile 21
     UP: 0,
     RIGTH: 0,
     DOWN: 3,
-    LEFT: 4,
+    LEFT: 3,
   },
   {
     //tile 22
     UP: 0,
-    RIGTH: 4,
+    RIGTH: 3,
     DOWN: 0,
     LEFT: 0,
   },
@@ -194,24 +193,24 @@ const reglas = [
   },
   {
     //tile 26
-    UP: 0,
+    UP: 2,
     RIGTH: 0,
-    DOWN: 3,
-    LEFT: 0,
+    DOWN: 0,
+    LEFT: 2,
   },
   {
     //tile 27
-    UP: 5,
-    RIGTH: 4,
+    UP: 2,
+    RIGTH: 3,
     DOWN: 0,
     LEFT: 0,
   },
   {
     //tile 28
-    UP: 0,
+    UP: 2,
     RIGTH: 0,
-    DOWN: 3,
-    LEFT: 4,
+    DOWN: 2,
+    LEFT: 0,
   },
   {
     //tile 29
@@ -230,48 +229,48 @@ const reglas = [
   {
     //tile 31
     UP: 3,
-    RIGTH: 4,
+    RIGTH: 3,
     DOWN: 0,
     LEFT: 0,
   },
   {
     //tile 32
     UP: 0,
-    RIGTH: 6,
-    DOWN: 7,
+    RIGTH: 4,
+    DOWN: 4,
     LEFT: 0,
   },
   {
     //tile 33
     UP: 0,
-    RIGTH: 6,
+    RIGTH: 4,
     DOWN: 3,
-    LEFT: 6,
+    LEFT: 4,
   },
   {
     //tile 34
-    UP: 7,
-    RIGTH: 6,
+    UP: 4,
+    RIGTH: 4,
     DOWN: 0,
     LEFT: 0,
   },
   {
     //tile 35
     UP: 0,
-    RIGTH: 9,
+    RIGTH: 5,
     DOWN: 0,
-    LEFT: 6,
+    LEFT: 4,
   },
   {
     //tile 36
     UP: 0,
     RIGTH: 0,
-    DOWN: 8,
-    LEFT: 9,
+    DOWN: 5,
+    LEFT: 5,
   },
   {
     //tile 37
-    UP: 8,
+    UP: 5,
     RIGTH: 2,
     DOWN: 0,
     LEFT: 2,
@@ -281,26 +280,26 @@ const reglas = [
     UP: 0,
     RIGTH: 0,
     DOWN: 0,
-    LEFT: 6,
+    LEFT: 4,
   },
   {
     //tile 39
     UP: 0,
-    RIGTH: 6,
+    RIGTH: 4,
     DOWN: 0,
-    LEFT: 6,
+    LEFT: 4,
   },
   {
     //tile 40
     UP: 0,
     RIGTH: 0,
-    DOWN: 8,
+    DOWN: 5,
     LEFT: 0,
   },
   {
     //tile 41
-    UP: 8,
-    RIGTH: 6,
+    UP: 5,
+    RIGTH: 4,
     DOWN: 0,
     LEFT: 0,
   },
@@ -309,11 +308,11 @@ const reglas = [
     UP: 0,
     RIGTH: 0,
     DOWN: 0,
-    LEFT: 6,
+    LEFT: 4,
   },
   {
     //tile 43
-    UP: 7,
+    UP: 0,
     RIGTH: 0,
     DOWN: 0,
     LEFT: 0,
@@ -322,73 +321,138 @@ const reglas = [
     //tile 44
     UP: 0,
     RIGTH: 0,
-    DOWN: 8,
-    LEFT: 4,
+    DOWN: 5,
+    LEFT: 3,
   },
   {
     //tile 45
     UP: 0,
     RIGTH: 0,
     DOWN: 0,
-    LEFT: 6,
+    LEFT: 4,
   },
   {
     //tile 46
     UP: 0,
     RIGTH: 0,
-    DOWN: 7,
+    DOWN: 4,
     LEFT: 0,
   },
   {
     //tile 47
-    UP: 8,
+    UP: 5,
     RIGTH: 0,
-    DOWN: 8,
+    DOWN: 5,
     LEFT: 0,
   },
   {
     //tile 48
     UP: 0,
     RIGTH: 0,
-    DOWN: 7,
-    LEFT: 6,
+    DOWN: 4,
+    LEFT: 4,
   },
   {
     //tile 49
-    UP: 8,
-    RIGTH: 6,
+    UP: 5,
+    RIGTH: 4,
     DOWN: 0,
     LEFT: 0,
   },
   {
     //tile 50
-    UP: 7,
+    UP: 4,
     RIGTH: 0,
     DOWN: 0,
-    LEFT: 6,
+    LEFT: 4,
   },
   {
     //tile 51
     UP: 0,
     RIGTH: 0,
     DOWN: 0,
-    LEFT: 6,
+    LEFT: 4,
   },
   {
     //tile 52
-    UP: 7,
+    UP: 4,
     RIGTH: 2,
-    DOWN: 7,
+    DOWN: 4,
     LEFT: 2,
   },
   {
     //tile 53
-    UP: 7,
-    RIGTH: 10,
+    UP: 4,
+    RIGTH: 5,
     DOWN: 0,
     LEFT: 0,
   },
+  {
+    //tile 54
+    UP: 1,
+    RIGTH: 0,
+    DOWN: 1,
+    LEFT: 0,
+  },
+  {
+    //tile 55
+    UP: 5,
+    RIGTH: 0,
+    DOWN: 0,
+    LEFT: 5,
+  },
+  {
+    //tile 56
+    UP: 0,
+    RIGTH: 0,
+    DOWN: 0,
+    LEFT: 0,
+  },
+  {
+    //tile 57
+    UP: 0,
+    RIGTH: 0,
+    DOWN: 0,
+    LEFT: 0,
+  },
+  {
+    //tile 58
+    UP: 4,
+    RIGTH: 5,
+    DOWN: 4,
+    LEFT: 3,
+  },
+  {
+    //tile 59
+    UP: 4,
+    RIGTH: 5,
+    DOWN: 0,
+    LEFT: 3,
+  },
+  {
+    //tile 60
+    UP: 4,
+    RIGTH: 2,
+    DOWN: 4,
+    LEFT: 2,
+  },
+  {
+    //tile 61
+    UP: 2,
+    RIGTH: 0,
+    DOWN: 3,
+    LEFT: 0,
+  },
+  {
+    //tile 62
+    UP: 5,
+    RIGTH: 0,
+    DOWN: 0,
+    LEFT: 4,
+  },
 ];
+
+const NA = reglas.length; //numero de azulejos
 
 function preload() {
   for (let i = 0; i < NA; i++) {
@@ -426,7 +490,15 @@ function setup() {
 
 function draw() {
   //background(111);
-  const celdasDisponibles = celdas.filter((celda) => celda.colapsada == false);
+
+  const celdasConOpciones = celdas.filter((celda) => {
+    return celda.opciones.length > 0;
+  });
+
+  const celdasDisponibles = celdasConOpciones.filter(
+    (celda) => celda.colapsada == false
+  );
+
   if (celdasDisponibles.length > 0) {
     celdasDisponibles.sort((a, b) => {
       return a.opciones.length - b.opciones.length;
@@ -447,6 +519,11 @@ function draw() {
       for (let y = 0; y < RETICULA; y++) {
         const celdaIndex = x + y * RETICULA;
         const celdaActual = celdas[celdaIndex];
+        if (celdaActual.opciones.length < 1) {
+          fill(255, 100, 100);
+          rect(x * ancho, y * alto, ancho, alto);
+        }
+
         if (celdaActual.colapsada) {
           const indiceDeAzulejo = celdaActual.opciones[0];
           const reglasActuales = reglas[indiceDeAzulejo];
@@ -489,8 +566,8 @@ function draw() {
             }
           }
         } else {
-          strokeWeight(6);
-          rect(x * ancho, y * alto, ancho, alto);
+          //strokeWeight(6);
+          //rect(x * ancho, y * alto, ancho, alto);
         }
       }
     }
