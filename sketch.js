@@ -1,5 +1,5 @@
 const celdas = [];
-const RETICULA = 16;
+const RETICULA = 12;
 
 // ancho y alto de la celda
 let ancho;
@@ -19,16 +19,16 @@ const reglas = [
   {
     //tile 1
     UP: 0,
-    RIGTH: 0,
-    DOWN: 1,
+    RIGTH: 2,
+    DOWN: 0,
     LEFT: 0,
   },
   {
     //tile 2
-    UP: 1,
-    RIGTH: 2,
+    UP: 0,
+    RIGTH: 0,
     DOWN: 0,
-    LEFT: 0,
+    LEFT: 3,
   },
   {
     //tile 3
@@ -109,14 +109,14 @@ const reglas = [
   },
   {
     //tile 14
-    UP: 5,
+    UP: 2,
     RIGTH: 0,
-    DOWN: 1,
-    LEFT: 5,
+    DOWN: 3,
+    LEFT: 0,
   },
   {
     //tile 15
-    UP: 1,
+    UP: 0,
     RIGTH: 2,
     DOWN: 0,
     LEFT: 0,
@@ -235,220 +235,115 @@ const reglas = [
   },
   {
     //tile 32
-    UP: 0,
-    RIGTH: 4,
-    DOWN: 4,
+    UP: 2,
+    RIGTH: 0,
+    DOWN: 2,
     LEFT: 0,
   },
   {
     //tile 33
     UP: 0,
-    RIGTH: 4,
-    DOWN: 3,
-    LEFT: 4,
+    RIGTH: 0,
+    DOWN: 0,
+    LEFT: 0,
   },
   {
     //tile 34
-    UP: 4,
-    RIGTH: 4,
+    UP: 0,
+    RIGTH: 0,
     DOWN: 0,
     LEFT: 0,
   },
   {
     //tile 35
-    UP: 0,
-    RIGTH: 5,
-    DOWN: 0,
-    LEFT: 4,
+    UP: 3,
+    RIGTH: 0,
+    DOWN: 3,
+    LEFT: 2,
   },
   {
     //tile 36
-    UP: 0,
-    RIGTH: 0,
-    DOWN: 5,
-    LEFT: 5,
+    UP: 2,
+    RIGTH: 2,
+    DOWN: 2,
+    LEFT: 2,
   },
   {
     //tile 37
-    UP: 5,
-    RIGTH: 2,
-    DOWN: 0,
-    LEFT: 2,
+    UP: 3,
+    RIGTH: 0,
+    DOWN: 2,
+    LEFT: 0,
   },
   {
     //tile 38
     UP: 0,
     RIGTH: 0,
     DOWN: 0,
-    LEFT: 4,
+    LEFT: 0,
   },
   {
     //tile 39
-    UP: 0,
-    RIGTH: 4,
+    UP: 3,
+    RIGTH: 2,
     DOWN: 0,
-    LEFT: 4,
+    LEFT: 0,
   },
   {
     //tile 40
     UP: 0,
-    RIGTH: 0,
-    DOWN: 5,
+    RIGTH: 3,
+    DOWN: 2,
     LEFT: 0,
   },
   {
     //tile 41
-    UP: 5,
-    RIGTH: 4,
-    DOWN: 0,
+    UP: 0,
+    RIGTH: 2,
+    DOWN: 3,
     LEFT: 0,
   },
   {
     //tile 42
     UP: 0,
-    RIGTH: 0,
+    RIGTH: 2,
     DOWN: 0,
-    LEFT: 4,
+    LEFT: 3,
   },
   {
     //tile 43
-    UP: 0,
+    UP: 2,
     RIGTH: 0,
-    DOWN: 0,
-    LEFT: 0,
+    DOWN: 2,
+    LEFT: 3,
   },
   {
     //tile 44
     UP: 0,
-    RIGTH: 0,
-    DOWN: 5,
-    LEFT: 3,
+    RIGTH: 2,
+    DOWN: 2,
+    LEFT: 2,
   },
   {
     //tile 45
     UP: 0,
     RIGTH: 0,
-    DOWN: 0,
-    LEFT: 4,
+    DOWN: 3,
+    LEFT: 2,
   },
   {
     //tile 46
     UP: 0,
-    RIGTH: 0,
-    DOWN: 4,
+    RIGTH: 2,
+    DOWN: 2,
     LEFT: 0,
   },
   {
     //tile 47
-    UP: 5,
-    RIGTH: 0,
-    DOWN: 5,
-    LEFT: 0,
-  },
-  {
-    //tile 48
-    UP: 0,
-    RIGTH: 0,
-    DOWN: 4,
-    LEFT: 4,
-  },
-  {
-    //tile 49
-    UP: 5,
-    RIGTH: 4,
-    DOWN: 0,
-    LEFT: 0,
-  },
-  {
-    //tile 50
-    UP: 4,
-    RIGTH: 0,
-    DOWN: 0,
-    LEFT: 4,
-  },
-  {
-    //tile 51
     UP: 0,
     RIGTH: 0,
     DOWN: 0,
-    LEFT: 4,
-  },
-  {
-    //tile 52
-    UP: 4,
-    RIGTH: 2,
-    DOWN: 4,
     LEFT: 2,
-  },
-  {
-    //tile 53
-    UP: 4,
-    RIGTH: 5,
-    DOWN: 0,
-    LEFT: 0,
-  },
-  {
-    //tile 54
-    UP: 1,
-    RIGTH: 0,
-    DOWN: 1,
-    LEFT: 0,
-  },
-  {
-    //tile 55
-    UP: 5,
-    RIGTH: 0,
-    DOWN: 0,
-    LEFT: 5,
-  },
-  {
-    //tile 56
-    UP: 0,
-    RIGTH: 0,
-    DOWN: 0,
-    LEFT: 0,
-  },
-  {
-    //tile 57
-    UP: 0,
-    RIGTH: 0,
-    DOWN: 0,
-    LEFT: 0,
-  },
-  {
-    //tile 58
-    UP: 4,
-    RIGTH: 5,
-    DOWN: 4,
-    LEFT: 3,
-  },
-  {
-    //tile 59
-    UP: 4,
-    RIGTH: 5,
-    DOWN: 0,
-    LEFT: 3,
-  },
-  {
-    //tile 60
-    UP: 4,
-    RIGTH: 2,
-    DOWN: 4,
-    LEFT: 2,
-  },
-  {
-    //tile 61
-    UP: 2,
-    RIGTH: 0,
-    DOWN: 3,
-    LEFT: 0,
-  },
-  {
-    //tile 62
-    UP: 5,
-    RIGTH: 0,
-    DOWN: 0,
-    LEFT: 4,
   },
 ];
 
