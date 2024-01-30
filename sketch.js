@@ -1,5 +1,5 @@
 const celdas = [];
-const RETICULA = 12;
+const RETICULA = 18;
 
 // ancho y alto de la celda
 let ancho;
@@ -344,6 +344,13 @@ const reglas = [
     RIGTH: 0,
     DOWN: 0,
     LEFT: 2,
+  },
+  {
+    //tile 48
+    UP: 2,
+    RIGTH: 0,
+    DOWN: 0,
+    LEFT: 0,
   },
 ];
 
